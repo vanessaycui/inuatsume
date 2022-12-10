@@ -1,0 +1,35 @@
+nav {
+    color: rgb(228, 215, 215);
+    background-color: #6eaeee;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
+
+.page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background-color: #6eaeee;
+}
+
+.page-footer>div{
+    background-color: #6eaeee;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    color: rgb(66, 64, 64);
+    
+}
+
+.card-content{
+    min-width: 600px;
+}
