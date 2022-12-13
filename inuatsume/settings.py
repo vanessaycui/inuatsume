@@ -77,9 +77,7 @@ WSGI_APPLICATION = 'inuatsume.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'inuatsume',
-        'USERNAME': 'vanessacui',
-        'PASSWORD': 'neg6x2VC!123'
+        'NAME': 'inuatsume'
     }
 }
 

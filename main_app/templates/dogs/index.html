@@ -5,17 +5,19 @@
 
 {% for dog in dogs %}
   <div class="card">
-    <div class="card-content">
-        <!-- we are using instances of classes here therefore we can use dot notation -->
-      <span class="card-title">{{ dog.name }}</span>
-      <p>Breed: {{ dog.breed }}</p>
-      <p>Description: {{ dog.description }}</p>
-      {% if dog.age > 0 %}
-        <p>Age: {{ dog.age }}</p>
-      {% else %}
-        <p>Age: Puppy</p>
-      {% endif %}
-    </div>
+    <a href="{%url 'detail' dog.id%}">
+      <div class="card-content">
+          <!-- we are using instances of classes here therefore we can use dot notation -->
+        <span class="card-title">{{ dog.name }}</span>
+        <p>Breed: {{ dog.breed }}</p>
+        <p>Description: {{ dog.description }}</p>
+        {% if dog.age > 0 %}
+          <p>Age: {{ dog.age }}</p>
+        {% else %}
+          <p>Age: Puppy</p>
+        {% endif %}
+      </div>
+    </a>
   </div>
 {% endfor %}
 
