@@ -16,7 +16,7 @@ nav {
     background-color: #6eaeee;
     width: 100%;
     text-align: center;
-    padding-bottom: 2%;
+    padding: 0 20%;
 }
 
 
@@ -33,3 +33,5 @@ main{
 .card-content{
     min-width: 600px;
 }
+
+
