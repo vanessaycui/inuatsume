@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Dog
 from .forms import FeedingForm
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # Create your views here.
 
 
@@ -23,6 +24,23 @@ def dog_detail(request, dog_id):
     'dog': dog,
     'feeding_form': feeding_form
     })
+
+class DogUpdate(UpdateView):
+  model = Dog
+  fields = ['breed', 'description', 'age']
+
+# class DogDelete(DeleteView):
+#   model = Dog
+#   success_url = '/dogs/'
+def delete(request, dog_id):
+  dog = Dog.objects.get(id = dog_id)
+  dog.delete()
+  return redirect('index')
+
+class DogCreate(CreateView):
+  model = Dog
+  fields = '__all__'
+
 
 def add_feeding(request, dog_id):
   form = FeedingForm(request.POST)
