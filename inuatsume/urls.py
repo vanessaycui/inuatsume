@@ -19,4 +19,6 @@ from django.urls import include, path
 urlpatterns = [
     path('', include('main_app.urls')),
     path('admin/', admin.site.urls),
+    # include the built-in auth urls for the built-in views
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

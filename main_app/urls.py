@@ -22,5 +22,6 @@ urlpatterns = [
     #Toy <> Dog M:M
     path('dogs/<int:dog_id>/toys/<int:toy_id>/add', views.add_toy, name='add_toy'),
     path('dogs/<int:dog_id>/toys/<int:toy_id>/delete', views.delete_toy, name='delete_toy'),
-
+    #authentication
+    path('accounts/signup/', views.signup, name='signup'),
 ]
